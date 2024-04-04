@@ -1,13 +1,13 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet } from "react-router-dom";
 
 function ReceptsLayout() {
   return (
     <div>
-        <h1>Recept List</h1>
-        <hr />
-        <Outlet/>
+      <h1>MENU</h1>
+      <hr />
+      <Outlet />
     </div>
-  )
+  );
 }
 
-export default ReceptsLayout
+export default ReceptsLayout;

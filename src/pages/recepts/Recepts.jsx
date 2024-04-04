@@ -8,27 +8,34 @@ function Recepts() {
     isPending,
   } = useFetch("http://localhost:3000/recepts");
   return (
-    <div className="recept-container">
-      {error && (
-        <div>
-          <h3>{error}</h3>
-        </div>
-      )}
-      {isPending && (
-        <div>
-          <h3>Loading...</h3>
-        </div>
-      )}
-      {recepts &&
-        recepts.map((recept) => {
-          return (
-            <div key={recept.id} className="card">
-              <h2>{recept.title}</h2>
-              <p>By {recept.author}</p>
-              <NavLink to={`./${recept.id}`}>Read More</NavLink>
-            </div>
-          );
-        })}
+    <div className="recepts-wrapper">
+      <div className="recept-container">
+        {error && (
+          <div>
+            <h3>{error}</h3>
+          </div>
+        )}
+        {isPending && (
+          <div>
+            <h3>Loading...</h3>
+          </div>
+        )}
+        {recepts &&
+          recepts.map((recept) => {
+            return (
+              <div key={recept.id} className="card">
+                <div>
+                  <h2>{recept.name}</h2>
+                  <p>{recept.time}</p>
+                </div>
+
+                <NavLink to={`./${recept.id}`}>
+                  <span className="view">View →</span>
+                </NavLink>
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 }
