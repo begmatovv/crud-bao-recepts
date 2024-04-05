@@ -5,7 +5,24 @@
 * {
   box-sizing: border-box;
 }
-
+.body-bg {
+  background-image: url(../public/burger.jpg);
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  /* Pull the background 70px higher to the same place as #bg's */
+  /*background-position: center -70px;*/
+  -webkit-filter: blur(10px);
+  filter: blur(8px);
+}
+.recepts-bg {
+  padding: 10px;
+  background-color: #ffffff27;
+}
 .App {
   max-width: 960px;
   margin: 0 auto;
@@ -23,7 +40,7 @@ nav h1 {
 }
 
 nav a {
-  color: #333333;
+  color: #ff7900;
   padding: 4px 10px;
 }
 
@@ -87,7 +104,7 @@ textarea {
 
 .pageNotFound-container a {
   text-decoration: none;
-  color: #333;
+  color: #ff7900;
   padding: 5px 8px;
   border: 2px solid #333;
   background-color: #fff;
@@ -99,7 +116,6 @@ textarea {
 }
 
 /* receptsS */
-
 .recept-container .card {
   display: flex;
   justify-content: space-between;
@@ -111,6 +127,7 @@ textarea {
   border-radius: 4px;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.05);
   margin-bottom: 20px;
+  background-color: #ffffff5d;
 }
 img {
   width: 100%;
@@ -123,9 +140,32 @@ img {
   background-color: rgb(114, 235, 8);
 }
 .recept-container {
+  height: 400px;
+  overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   align-items: center;
+}
+
+.receptdetail {
+  padding: 15px;
+  background-color: #fff;
+}
+.receptdetail img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+.ingredient {
+  margin-right: 5px;
+  background-color: #a8ea0e;
+  padding: 5px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.time {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
 }

@@ -18,15 +18,18 @@ const ReceptsDetail = () => {
         </div>
       )}
       {recept && (
-        <>
-          <img src={recept.image} alt={recept.name} width={300} />
+        <div className="receptdetail">
+          <img src={recept.image} alt={recept.name} width={200} height={300} />
           <h2>Name: {recept.name}</h2>
           <p className=" bg-black  ">
-            INGREDIENTS: <i className="ingredient">{recept.ingredients}</i>
+            INGREDIENTS:{" "}
+            {recept.ingredients.map((ingredient) => {
+              return <span className="ingredient">{ingredient}</span>
+            })}
           </p>
-          <p>Time: {recept.time}</p>
+          <p>Time: <span className="time">{recept.time}</span></p>
           <p>{recept.body}</p>
-        </>
+        </div>
       )}
     </div>
   );

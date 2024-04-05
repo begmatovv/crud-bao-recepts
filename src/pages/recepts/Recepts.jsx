@@ -26,7 +26,7 @@ function Recepts() {
               <div key={recept.id} className="card">
                 <div>
                   <h2>{recept.name}</h2>
-                  <p>{recept.time}</p>
+                  <p className="time">{recept.time}</p>
                 </div>
 
                 <NavLink to={`./${recept.id}`}>
@@ -36,6 +36,7 @@ function Recepts() {
             );
           })}
       </div>
+      
     </div>
   );
 }
