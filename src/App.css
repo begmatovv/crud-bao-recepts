@@ -42,12 +42,14 @@ nav h1 {
 nav a {
   color: #ff7900;
   padding: 4px 10px;
+  font-size: 18px;
 }
 
 nav a.active {
   color: white;
   background: #333;
   text-decoration: none;
+  border-radius: 8px;
 }
 
 /* FORM */
@@ -163,6 +165,7 @@ img {
   padding: 5px;
   border-radius: 8px;
   font-weight: 600;
+  cursor: pointer;
 }
 .time {
   color: red;
